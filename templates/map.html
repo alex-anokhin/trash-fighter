@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <h2 class="mb-4">Welcome MAP!</h2>
+
+                <!-- Google Map container -->
+                <div id="map" style="height: 50vh;"></div>
+
+                <p class="lead mt-3">User: {{ current_user.name }}</p>
+                <p class="lead">Rating: {{ current_user.rating }}</p>
+                <p>
+                    <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize the map
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 49.1521179, lng: 9.215595 },
+                zoom: 18
+            });
+
+            // Add your custom pins/markers here
+            var marker1 = new google.maps.Marker({
+                position: { lat: 49.1521179, lng: 9.215595 },
+				map: map,
+				icon: 'static/img/full-trash-bin-icon.png',
+                title: '42Heilbronn'
+            });
+			var marker2 = new google.maps.Marker({
+                position: { lat: 49.152236, lng: 9.216093 },
+				icon: 'static/img/full-trash-bin-icon.png',
+                map: map,
+                title: '42Heilbronn2'
+            });
+        }
+    </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbLK2-JG02_t99a-ffDyFhYV7aN6GX49A&callback=initMap"></script>
+{% endblock %}
