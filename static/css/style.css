@@ -1,0 +1,50 @@
+:root {
+    --primary-color: #5afc03;
+    --primary-black: #242424;
+    --primary-white: #fafafa;
+}
+
+header {
+    background-color: var(--primary-color);
+}
+
+h1 {
+    color: var(--primary-black);
+    font-weight: 700;
+}
+.logo {
+    font-weight: 900;
+    margin-left: 1rem;
+}
+.navbar-collapse {
+    justify-content: flex-end;
+}
+.navbar-collapse,
+.navbar-toggler {
+    margin-right: 1rem;
+}
+.login-btn {
+  float: right;
+}
+/* @media (max-width: 576px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 56px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: var(--bg-dark);
+        z-index: 11;
+        display: none;
+      }
+      .navbar-collapse.show {
+        display: flex;
+        justify-content: center;
+      }
+      .navbar-nav {
+        gap: 2vh;
+      }
+      .nav-link {
+        font-size: 1.75rem;
+      }
+} */
