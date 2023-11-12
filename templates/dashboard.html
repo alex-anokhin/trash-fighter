@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="text-center">
+                <h2 class="mb-4">Welcome to Dashboard!</h2>
+
+					<div class="figma-embed">
+						<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FXHaNcEuP55ZSAXwyV4MAHA%2Ftrash-tracker%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DviBvAFajxMVT63o5-1" allowfullscreen></iframe>
+					</div>
+                <p class="lead">User: {{ current_user.name }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

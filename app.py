@@ -50,11 +50,11 @@ def map():
     print("Map route accessed")
     return render_template('map.html')
 
-@app.route('/ratings')
+@app.route('/dashboard')
 @login_required
-def ratings():
+def dashboard():
     print("Map route accessed")
-    return render_template('ratings.html')
+    return render_template('dashboard.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
